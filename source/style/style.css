@@ -23,6 +23,7 @@ img {
 
 .page {
   width: 100%;
+  font-family: 'Geometria', Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.2;
 }
@@ -55,5 +56,19 @@ img {
   clip: rect(1px, 1px, 1px, 1px);
   border: 0;
   overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url("../fonts/Geometria-Bold.woff2") format("woff2"), url("../fonts/Geometria-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url("../fonts/Geometria.woff2") format("woff2"), url("../fonts/Geometria.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 /*# sourceMappingURL=style.css.map */
