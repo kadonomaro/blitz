@@ -1,0 +1,62 @@
+:root {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+
+body, h1, h2, h3, h4, h5, h6, p, ul, form {
+    margin: 0;
+    padding: 0;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.page {
+    width: 100%;
+	font-size: 1rem;
+    line-height: 1.2;
+}
+
+
+.all-wrapper {
+    overflow: hidden;
+}
+
+
+.container {
+    @include container(1140px, 10px);
+}
+
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    border: 0;
+    overflow: hidden;
+
+}
