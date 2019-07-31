@@ -1,0 +1,18 @@
+.hero {
+    position: relative;
+    padding: 30px 0;
+    &__background {
+        background-image: url('../image/hero/hero-background.jpg');
+        background-size: cover;
+    }
+
+    &__title {
+        max-width: 700px;
+        font-size: 50px;
+        line-height: 75px;
+        text-transform: uppercase;
+    }
+    &__subtitle {
+
+    }
+}

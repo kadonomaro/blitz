@@ -1,0 +1,12 @@
+.call {
+    display: inline-block;
+    &__phone {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+    &__link {
+        text-decoration: none;
+        color: #000000;
+    }
+}

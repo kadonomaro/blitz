@@ -1,0 +1,13 @@
+.logo {
+    display: flex;
+    align-items: center;
+    &__icon {
+        min-width: 141px;
+        height: 110px;
+        margin-right: 30px;
+        background-image: url('../image/hero/logo.svg');
+    }
+    &__text {
+
+    }
+}

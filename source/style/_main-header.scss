@@ -1,0 +1,11 @@
+.main-header {
+    display: flex;
+    align-items: center;
+    &__col {
+        width: 33.3333%;
+    }
+
+    &__call {
+        text-align: right;
+    }
+}

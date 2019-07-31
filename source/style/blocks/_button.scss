@@ -1,0 +1,31 @@
+.button {
+    min-width: 270px;
+    padding: 14px 0 15px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    line-height: 24px;
+    color: #ffffff;
+    background-color: $color-main;
+    border: 1px solid $color-main;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in;
+    &:hover {
+        color: #000000;
+        background-color: transparent;
+    }
+}
+
+.button--transparent {
+    color: #000000;
+    background-color: transparent;
+    &:hover {
+        color: #ffffff;
+        background-color: $color-main;
+    }
+}
+
+.button--wide {
+    min-width: 360px;
+}

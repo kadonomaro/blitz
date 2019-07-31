@@ -1,0 +1,18 @@
+.features {
+    margin-bottom: 50px;
+    &__list {
+        display: flex;
+        list-style-type: none;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+    &__num {
+        font-size: 80px;
+    }
+    &__text {
+
+    }
+}
