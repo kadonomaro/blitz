@@ -1,0 +1,24 @@
+.apartments {
+
+    &__inner {
+
+    }
+    &__title {
+
+    }
+    &__subtitle {
+
+    }
+    &__filter {
+
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    &__item {
+        margin: 15px;
+        @include flex-columns(6, 15px);
+    }
+}

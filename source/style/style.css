@@ -11,7 +11,7 @@
           box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, form {
+body, h1, h2, h3, h4, h5, h6, p, ul, form, figure {
   margin: 0;
   padding: 0;
 }
@@ -33,7 +33,7 @@ img {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -189,5 +189,23 @@ img {
 
 .main-header__call {
   text-align: right;
+}
+
+.apartments__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.apartments__item {
+  margin: 15px;
+  -ms-flex-preferred-size: calc((100% / 12 * 6) - (15px * 2));
+      flex-basis: calc((100% / 12 * 6) - (15px * 2));
+  max-width: calc((100% / 12 * 6) - (15px * 2));
+  margin-right: 15px;
+  margin-left: 15px;
 }
 /*# sourceMappingURL=style.css.map */
