@@ -92,6 +92,7 @@ img {
 .section-title {
   margin-bottom: 40px;
   font-size: 35px;
+  font-weight: 900;
   text-align: center;
 }
 
@@ -105,6 +106,7 @@ img {
   src: url("../fonts/Geometria-Bold.woff2") format("woff2"), url("../fonts/Geometria-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -112,6 +114,15 @@ img {
   src: url("../fonts/Geometria.woff2") format("woff2"), url("../fonts/Geometria.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url("../fonts/Geometria-Heavy.woff2") format("woff2"), url("../fonts/Geometria-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 .button {
@@ -212,6 +223,7 @@ img {
 .hero__title {
   max-width: 700px;
   font-size: 50px;
+  font-weight: 900;
   line-height: 75px;
   text-transform: uppercase;
 }
