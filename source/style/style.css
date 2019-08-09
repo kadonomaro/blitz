@@ -208,4 +208,29 @@ img {
   margin-right: 15px;
   margin-left: 15px;
 }
+
+.agency__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.agency__item {
+  margin: 15px;
+  -ms-flex-preferred-size: calc((100% / 12 * 6) - (15px * 2));
+      flex-basis: calc((100% / 12 * 6) - (15px * 2));
+  max-width: calc((100% / 12 * 6) - (15px * 2));
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.agency-item {
+  height: 100%;
+  padding: 30px 50px;
+  border: 1px solid #2A94E2;
+  border-radius: 10px;
+}
 /*# sourceMappingURL=style.css.map */

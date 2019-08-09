@@ -1,0 +1,27 @@
+.agency {
+
+    &__inner {
+
+    }
+
+    &__title {
+        
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    &__item {
+        margin: 15px;
+        @include flex-columns(6, 15px);
+    }
+}
+
+
+.agency-item {
+    height: 100%;
+    padding: 30px 50px;
+    border: 1px solid #2A94E2;
+    border-radius: 10px;
+}
