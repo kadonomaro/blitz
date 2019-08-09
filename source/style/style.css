@@ -22,10 +22,41 @@ img {
 }
 
 .page {
+  position: relative;
   width: 100%;
   font-family: 'Geometria', Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.2;
+}
+
+.page--pixel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../template.jpg");
+  background-size: contain;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  opacity: 0.3;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.pixel {
+  position: fixed;
+  z-index: 9999;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border: 2px dashed #f90;
+  border-radius: 5px;
 }
 
 .all-wrapper {
@@ -56,6 +87,17 @@ img {
   clip: rect(1px, 1px, 1px, 1px);
   border: 0;
   overflow: hidden;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.section-subtitle {
+  display: block;
+  text-align: center;
 }
 
 @font-face {
@@ -189,6 +231,10 @@ img {
 
 .main-header__call {
   text-align: right;
+}
+
+.questions__inner {
+  padding: 60px 0 30px;
 }
 
 .apartments__list {
