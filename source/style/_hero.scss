@@ -6,14 +6,38 @@
         background-size: cover;
     }
 
+    &__content {
+        margin-top: -5px;
+        padding-left: 5px;
+    }
+    &__features {
+        margin-bottom: 36px;
+    }
+        
     &__title {
         max-width: 700px;
+        margin-bottom: 18px;
         font-size: 50px;
         font-weight: 900;
         line-height: 75px;
+        letter-spacing: -0.3px;
         text-transform: uppercase;
     }
     &__subtitle {
-
+        display: block;
+        max-width: 550px;
+        margin-bottom: 20px;
+        font-size: 22px;
+        line-height: 36px;
+        letter-spacing: -0.1px;
+    }
+    &__offer {
+        max-width: 500px;
+        margin-bottom: 35px;
+        padding: 12px 0 15px 87px;
+        line-height: 25px;
+        letter-spacing: -0.1px;
+        background-image: url('../icons/champagne.svg');
+        background-repeat: no-repeat;
     }
 }

@@ -1,18 +1,26 @@
 .features {
-    margin-bottom: 50px;
+    
     &__list {
         display: flex;
         list-style-type: none;
     }
     &__item {
+        display: flex;
+        align-items: center;
+        max-width: 33.3333%;
         &:not(:last-child) {
-            margin-right: 50px;
+            margin-right: 45px;
         }
     }
     &__num {
+        display: block;
         font-size: 80px;
     }
     &__text {
+        display: block;
+        padding-left: 20px;
+        padding-top: 20px;
+        line-height: 28px;
 
     }
 }

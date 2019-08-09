@@ -1,11 +1,14 @@
 .main-header {
     display: flex;
-    align-items: center;
     &__col {
         width: 33.3333%;
     }
+    &__logo {
+        padding-left: 10px;
+    }
 
     &__call {
+        margin-top: 15px;
         text-align: right;
     }
 }

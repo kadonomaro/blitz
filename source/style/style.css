@@ -156,8 +156,11 @@ img {
   background-color: #2a94e2;
 }
 
-.button--wide {
+.button--size-big {
   min-width: 360px;
+  padding: 20px 0 20px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .logo {
@@ -191,10 +194,6 @@ img {
   color: #000000;
 }
 
-.features {
-  margin-bottom: 50px;
-}
-
 .features__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,12 +201,30 @@ img {
   list-style-type: none;
 }
 
+.features__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 33.3333%;
+}
+
 .features__item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 45px;
 }
 
 .features__num {
+  display: block;
   font-size: 80px;
+}
+
+.features__text {
+  display: block;
+  padding-left: 20px;
+  padding-top: 20px;
+  line-height: 28px;
 }
 
 .hero {
@@ -220,28 +237,60 @@ img {
   background-size: cover;
 }
 
+.hero__content {
+  margin-top: -5px;
+  padding-left: 5px;
+}
+
+.hero__features {
+  margin-bottom: 36px;
+}
+
 .hero__title {
   max-width: 700px;
+  margin-bottom: 18px;
   font-size: 50px;
   font-weight: 900;
   line-height: 75px;
+  letter-spacing: -0.3px;
   text-transform: uppercase;
+}
+
+.hero__subtitle {
+  display: block;
+  max-width: 550px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 36px;
+  letter-spacing: -0.1px;
+}
+
+.hero__offer {
+  max-width: 500px;
+  margin-bottom: 35px;
+  padding: 12px 0 15px 87px;
+  line-height: 25px;
+  letter-spacing: -0.1px;
+  background-image: url("../icons/champagne.svg");
+  background-repeat: no-repeat;
 }
 
 .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .main-header__col {
   width: 33.3333%;
 }
 
+.main-header__logo {
+  padding-left: 10px;
+}
+
 .main-header__call {
+  margin-top: 15px;
   text-align: right;
 }
 
