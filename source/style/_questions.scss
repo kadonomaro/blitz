@@ -14,7 +14,7 @@
 
 .questions-block {
     display: flex;
-    border: 3px solid #f6f6f6;
+    border: 3px solid $color-border;
     &__main {
         padding: 35px 40px 25px;
     }
@@ -64,7 +64,7 @@
     &__side {
         max-width: 370px;
         padding: 30px 40px;
-        border-left: 3px solid #f6f6f6;
+        border-left: 3px solid $color-border;
     }
 }
 
