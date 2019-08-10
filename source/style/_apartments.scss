@@ -1,30 +1,3 @@
-.apartments {
-
-    &__inner {
-        padding: 30px 0;
-    }
-    &__title {
-        margin-bottom: 25px;
-    }
-    &__subtitle {
-        display: block;
-        margin-bottom: 45px;
-    }
-    &__filter {
-        margin-bottom: 30px;
-    }
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -15px;
-    }
-    &__item {
-        margin: 15px;
-        @include flex-columns(6, 15px);
-    }
-}
-
-
 .apartments-filter {
 
     &__list {
@@ -58,5 +31,80 @@
             background-color: darken($color: $color-main, $amount: 5%);
         }
     }
-    
+}
+
+
+.apartments {
+
+    &__inner {
+        padding: 30px 0;
+    }
+    &__title {
+        margin-bottom: 25px;
+    }
+    &__subtitle {
+        display: block;
+        margin-bottom: 45px;
+    }
+    &__filter {
+        margin-bottom: 30px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    &__item {
+        margin: 15px;
+        @include flex-columns(6, 15px);
+    }
+}
+
+
+.apartments-item {
+
+    transition: box-shadow 0.3s ease-in;
+    &:hover {
+        box-shadow: 0px 0px 18px rgba(233, 80, 79, 0.25);
+    }
+    &__image {
+
+    }
+
+    &__text {
+        padding: 25px 30px;
+    }
+    &__title {
+        margin-bottom: 15px;
+        font-weight: 900;
+        font-size: 22px;
+    }
+    &__subtitle {
+        display: block;
+        margin-bottom: 20px;
+    }
+    &__specs {
+        width: 100%;
+    }
+    &__price {
+        font-size: 33px;
+    }
+    &__meter-price {
+
+    }
+    &__button {
+        width: 100%;
+        padding: 20px;
+        font-family: inherit;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: $color-border;
+        border: 0;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in, color 0.2s ease-in;
+        &:hover {
+            color: #ffffff;
+            background-color: $color-main;
+        }
+    }
 }

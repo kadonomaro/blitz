@@ -506,41 +506,6 @@ img {
   max-width: 335px;
 }
 
-.apartments__inner {
-  padding: 30px 0;
-}
-
-.apartments__title {
-  margin-bottom: 25px;
-}
-
-.apartments__subtitle {
-  display: block;
-  margin-bottom: 45px;
-}
-
-.apartments__filter {
-  margin-bottom: 30px;
-}
-
-.apartments__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0 -15px;
-}
-
-.apartments__item {
-  margin: 15px;
-  -ms-flex-preferred-size: calc((100% / 12 * 6) - (15px * 2));
-      flex-basis: calc((100% / 12 * 6) - (15px * 2));
-  max-width: calc((100% / 12 * 6) - (15px * 2));
-  margin-right: 15px;
-  margin-left: 15px;
-}
-
 .apartments-filter__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -582,6 +547,94 @@ img {
 
 .apartments-filter__button--active:hover {
   background-color: #1d87d5;
+}
+
+.apartments__inner {
+  padding: 30px 0;
+}
+
+.apartments__title {
+  margin-bottom: 25px;
+}
+
+.apartments__subtitle {
+  display: block;
+  margin-bottom: 45px;
+}
+
+.apartments__filter {
+  margin-bottom: 30px;
+}
+
+.apartments__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.apartments__item {
+  margin: 15px;
+  -ms-flex-preferred-size: calc((100% / 12 * 6) - (15px * 2));
+      flex-basis: calc((100% / 12 * 6) - (15px * 2));
+  max-width: calc((100% / 12 * 6) - (15px * 2));
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.apartments-item {
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in;
+  transition: -webkit-box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
+}
+
+.apartments-item:hover {
+  -webkit-box-shadow: 0px 0px 18px rgba(233, 80, 79, 0.25);
+          box-shadow: 0px 0px 18px rgba(233, 80, 79, 0.25);
+}
+
+.apartments-item__text {
+  padding: 25px 30px;
+}
+
+.apartments-item__title {
+  margin-bottom: 15px;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.apartments-item__subtitle {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.apartments-item__specs {
+  width: 100%;
+}
+
+.apartments-item__price {
+  font-size: 33px;
+}
+
+.apartments-item__button {
+  width: 100%;
+  padding: 20px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #f6f6f6;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.apartments-item__button:hover {
+  color: #ffffff;
+  background-color: #2a94e2;
 }
 
 .agency__list {
