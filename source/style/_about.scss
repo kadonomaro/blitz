@@ -1,0 +1,46 @@
+.about {
+    background-color: $color-border;
+    &__inner {
+        display: flex;
+        margin: 0 -15px;
+        padding: 65px 0 65px;
+    }
+    &__col {
+        @include flex-columns(6, 15px);
+    }
+    &__title {
+        margin: 30px 0 20px;
+        text-align: left;
+        letter-spacing: 0;
+        line-height: 45px;
+    }
+    &__desc {
+        margin-bottom: 30px;
+        line-height: 26px;
+        p {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &__button {
+        padding: 14px 0 19px;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    &__images {
+        position: relative;
+        margin-bottom: 10px;
+    }
+    &__image {
+        width: 100%;
+    }
+    &__thumbs {
+        display: flex;
+        margin: 0 -5px;
+    }
+    &__thumb {
+        margin: 0 5px;
+    }
+}

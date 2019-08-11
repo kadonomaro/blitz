@@ -520,7 +520,7 @@ img {
 }
 
 .apartments__inner {
-  padding: 30px 0;
+  padding: 30px 0 60px;
 }
 
 .apartments__title {
@@ -605,6 +605,68 @@ img {
 .apartments-item__button:hover {
   color: #ffffff;
   background-color: #2a94e2;
+}
+
+.about {
+  background-color: #f6f6f6;
+}
+
+.about__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+  padding: 65px 0 65px;
+}
+
+.about__col {
+  -ms-flex-preferred-size: calc((100% / 12 * 6) - (15px * 2));
+      flex-basis: calc((100% / 12 * 6) - (15px * 2));
+  max-width: calc((100% / 12 * 6) - (15px * 2));
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.about__title {
+  margin: 30px 0 20px;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: 45px;
+}
+
+.about__desc {
+  margin-bottom: 30px;
+  line-height: 26px;
+}
+
+.about__desc p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.about__button {
+  padding: 14px 0 19px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.about__images {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.about__image {
+  width: 100%;
+}
+
+.about__thumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -5px;
+}
+
+.about__thumb {
+  margin: 0 5px;
 }
 
 .agency__list {
