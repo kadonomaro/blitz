@@ -34,32 +34,6 @@ img {
 
 }
 
-.page--pixel {
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-image: url('../template.jpg');
-        background-size: contain;
-        user-select: none;
-        pointer-events: none;
-        opacity: 0.3;
-        filter: invert(100%);
-    }
-}
-.pixel {
-    position: fixed;
-    z-index: 9999;
-    top: 10px;
-    left: 10px;
-    width: 30px;
-    height: 30px;
-    border: 2px dashed #f90;
-    border-radius: 5px;
-}
 
 
 .all-wrapper {

@@ -29,36 +29,6 @@ img {
   line-height: 1.2;
 }
 
-.page--pixel::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-image: url("../template.jpg");
-  background-size: contain;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
-  opacity: 0.3;
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-
-.pixel {
-  position: fixed;
-  z-index: 9999;
-  top: 10px;
-  left: 10px;
-  width: 30px;
-  height: 30px;
-  border: 2px dashed #f90;
-  border-radius: 5px;
-}
-
 .all-wrapper {
   overflow: hidden;
 }
@@ -658,7 +628,7 @@ img {
 .agency-item {
   height: 100%;
   padding: 30px 50px;
-  border: 1px solid #2A94E2;
+  border: 1px solid #2a94e2;
   border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */
