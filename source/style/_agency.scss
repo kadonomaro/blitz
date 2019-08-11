@@ -1,11 +1,11 @@
 .agency {
 
     &__inner {
-
+        padding: 50px 0;
     }
 
     &__title {
-        
+        margin-bottom: 45px;
     }
     &__list {
         display: flex;
@@ -13,15 +13,118 @@
         margin: 0 -15px;
     }
     &__item {
-        margin: 15px;
+        margin-bottom: 30px;
         @include flex-columns(6, 15px);
+    }
+    &__links {
+        display: flex;
+    }
+    &__col {
+        width: 33.3333%;
+    }
+    &__link {
+        display: block;
+        color: $color-main;
+        font-size: 22px;
+        line-height: 50px;
     }
 }
 
 
 .agency-item {
+    position: relative;
     height: 100%;
-    padding: 30px 50px;
+    padding: 30px 50px 25px;
+    background-image: url('../icons/card-decal.svg');
+    background-repeat: no-repeat;
+    background-position: left top 10px;
     border: 1px solid $color-main;
     border-radius: 10px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 105px;
+        right: 50px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../icons/directions.svg');
+        background-repeat: no-repeat;
+    }
+    &__title {
+        margin-bottom: 70px;
+        font-size: 22px;
+        font-weight: 900;
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__leader {
+        display: block;
+        margin-bottom: 5px;
+        color: rgba($color: #000000, $alpha: 0.5);
+        font-size: 12px;
+    }
+    &__leader-name {
+        display: block;
+        margin-bottom: 25px;
+    }
+    &__phone, &__email {
+        display: block;
+        color: #000000;
+        
+    }
+    &__phone {
+        margin-bottom: 15px;
+        font-size: 25px;
+        text-decoration: none;
+    }
+    &__email {
+
+    }
+}
+
+.agency-item--building-rent {
+    &::before {
+        background-position: 0 0;
+    }
+}
+.agency-item--commerce-rent {
+    &::before {
+        background-position: -245px 0;
+    }
+}
+.agency-item--deraptment {
+    &::before {
+        background-position: -478px 0;
+    }
+}
+.agency-item--new-building {
+    &::before {
+        background-position: -720px 0;
+    }
+}
+.agency-item--second-building {
+    &::before {
+        background-position: -950px -10px;
+    }
+}
+.agency-item--commerce-sell {
+    &::before {
+        background-position: -1190px 0;
+    }
+}
+.agency-item--investments {
+    &::before {
+        top: 65px;
+        right: 55px;
+        background-position: -1405px 0;
+    }
+}
+.agency-item--abroad-estate {
+    &::before {
+        top: 80px;
+        background-position: -1640px 0;
+    }
 }

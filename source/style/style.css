@@ -669,6 +669,14 @@ img {
   margin: 0 5px;
 }
 
+.agency__inner {
+  padding: 50px 0;
+}
+
+.agency__title {
+  margin-bottom: 45px;
+}
+
 .agency__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -679,7 +687,7 @@ img {
 }
 
 .agency__item {
-  margin: 15px;
+  margin-bottom: 30px;
   -ms-flex-preferred-size: calc((100% / 12 * 6) - (15px * 2));
       flex-basis: calc((100% / 12 * 6) - (15px * 2));
   max-width: calc((100% / 12 * 6) - (15px * 2));
@@ -687,10 +695,119 @@ img {
   margin-left: 15px;
 }
 
+.agency__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.agency__col {
+  width: 33.3333%;
+}
+
+.agency__link {
+  display: block;
+  color: #2a94e2;
+  font-size: 22px;
+  line-height: 50px;
+}
+
 .agency-item {
+  position: relative;
   height: 100%;
-  padding: 30px 50px;
+  padding: 30px 50px 25px;
+  background-image: url("../icons/card-decal.svg");
+  background-repeat: no-repeat;
+  background-position: left top 10px;
   border: 1px solid #2a94e2;
   border-radius: 10px;
+}
+
+.agency-item::before {
+  content: '';
+  position: absolute;
+  top: 105px;
+  right: 50px;
+  width: 150px;
+  height: 150px;
+  background-image: url("../icons/directions.svg");
+  background-repeat: no-repeat;
+}
+
+.agency-item__title {
+  margin-bottom: 70px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.agency-item__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.agency-item__leader {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+}
+
+.agency-item__leader-name {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.agency-item__phone, .agency-item__email {
+  display: block;
+  color: #000000;
+}
+
+.agency-item__phone {
+  margin-bottom: 15px;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.agency-item--building-rent::before {
+  background-position: 0 0;
+}
+
+.agency-item--commerce-rent::before {
+  background-position: -245px 0;
+}
+
+.agency-item--deraptment::before {
+  background-position: -478px 0;
+}
+
+.agency-item--new-building::before {
+  background-position: -720px 0;
+}
+
+.agency-item--second-building::before {
+  background-position: -950px -10px;
+}
+
+.agency-item--commerce-sell::before {
+  background-position: -1190px 0;
+}
+
+.agency-item--investments::before {
+  top: 65px;
+  right: 55px;
+  background-position: -1405px 0;
+}
+
+.agency-item--abroad-estate::before {
+  top: 80px;
+  background-position: -1640px 0;
 }
 /*# sourceMappingURL=style.css.map */
