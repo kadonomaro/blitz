@@ -1,0 +1,35 @@
+.leader {
+    background-color: $color-background-light;
+    background-image: url('../image/leader/leader.png');
+    background-repeat: no-repeat;
+    background-position: bottom right 380px;
+    &__inner {
+        display: flex;
+        padding: 50px 0 60px;
+    }
+    &__main {
+        @include flex-columns(7);
+    }
+    &__title {
+        margin-bottom: 25px;
+        line-height: 48px;
+        text-align: left;
+    }
+    &__name {
+        display: block;
+        margin-bottom: 30px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    &__desc {
+        margin-bottom: 35px;
+        line-height: 1.6;
+    }
+    &__desc p:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    &__button {
+        font-size: 20px;
+    }
+
+}
