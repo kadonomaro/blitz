@@ -32,3 +32,12 @@
     font-size: 20px;
     line-height: 28px;
 }
+
+.button--light {
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    &:hover {
+        color: #ffffff;
+    }
+}

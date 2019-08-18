@@ -5,9 +5,9 @@
         min-width: 141px;
         height: 110px;
         margin-right: 30px;
-        background-image: url('../image/hero/logo.svg');
+        background-image: url('../image/logo.svg');
     }
-    &__text {
-
-    }
+}
+.logo--light .logo__icon {
+    background-image: url('../image/logo-light.svg');
 }

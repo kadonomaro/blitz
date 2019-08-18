@@ -1,12 +1,24 @@
 .call {
     display: inline-block;
+    color: #000000;
     &__phone {
         display: block;
         margin-bottom: 20px;
         font-size: 30px;
+        color: inherit;
+    }
+    &__mail {
+        display: block;
+        padding-right: 20px;
+        margin-bottom: 25px;
+        font-size: 22px;
     }
     &__link {
         text-decoration: none;
-        color: #000000;
+        color: inherit;
     }
+}
+
+.call--light {
+    color: #ffffff;
 }
