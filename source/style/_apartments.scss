@@ -7,8 +7,9 @@
     &__item {
         flex-grow: 1;
         border: 2px solid $color-border;
-        &:not(:last-child) {
-            border-right: 0; 
+        border-right-width: 0;
+        &:last-child {
+            border-right-width: 2px; 
         }
     }
     &__button {

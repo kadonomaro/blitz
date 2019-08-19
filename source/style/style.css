@@ -145,6 +145,10 @@ img {
   color: #ffffff;
 }
 
+.button--text-light {
+  color: #ffffff;
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,6 +295,76 @@ img {
 .main-header__call {
   margin-top: 15px;
   text-align: right;
+}
+
+.main-nav__toggle {
+  width: 40px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-nav__toggle-line {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #2a94e2;
+  border-radius: 5px;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+
+.main-nav__toggle-line:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.main-nav__toggle-line:first-child {
+  width: 40px;
+}
+
+.main-nav__toggle-line:last-child {
+  width: 20px;
+}
+
+.main-nav__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 320px;
+  height: 100vh;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+.main-nav__list {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  list-style-type: none;
+}
+
+.main-nav__item {
+  margin-bottom: 20px;
+}
+
+.main-nav__link {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .questions__inner {
@@ -515,10 +589,11 @@ img {
       -ms-flex-positive: 1;
           flex-grow: 1;
   border: 2px solid #f6f6f6;
+  border-right-width: 0;
 }
 
-.apartments-filter__item:not(:last-child) {
-  border-right: 0;
+.apartments-filter__item:last-child {
+  border-right-width: 2px;
 }
 
 .apartments-filter__button {
