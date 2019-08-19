@@ -32,15 +32,42 @@
     &__images {
         position: relative;
         margin-bottom: 10px;
+        overflow: hidden;
+    }
+    &__images-track {
+        transition: transform 0.3s linear;
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
     }
     &__image {
-        width: 100%;
+        float: left;
     }
     &__thumbs {
         display: flex;
         margin: 0 -5px;
     }
     &__thumb {
+        position: relative;
         margin: 0 5px;
+        cursor: pointer;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            opacity: 0;
+            transition: opacity 0.3s linear;
+        }
+    }
+    &__thumb--active {
+        &::before {
+            opacity: 1;
+        }
     }
 }

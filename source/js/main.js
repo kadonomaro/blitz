@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+
     //modal window
     const callModalButton = document.querySelectorAll('.js-call-request-button');
     const modalOverlay = document.querySelector('.modal-overlay');
@@ -49,7 +50,28 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             modalOverlay.style.display = 'none';
         }, 300);
-
         document.body.classList.remove('page--modal-is-open');
     });
+
+
+    //about custom slider
+    const aboutImages = document.querySelectorAll('.about__image');
+    const aboutTrack = document.querySelector('.about__images-track');
+    const aboutThumbs = document.querySelectorAll('.about__thumb');
+    const trackWidth = aboutTrack.clientWidth;
+
+    aboutTrack.style.width = aboutTrack.clientWidth * aboutImages.length + 'px';
+
+
+    aboutThumbs.forEach((thumb, index) => {
+        thumb.addEventListener('click', function () {
+            aboutThumbs.forEach(thumb => {
+                thumb.classList.remove('about__thumb--active');
+            });
+            this.classList.add('about__thumb--active');
+            aboutTrack.style.transform = `translateX(-${trackWidth * index}px)`;
+        });
+    });
+    
+
 });
