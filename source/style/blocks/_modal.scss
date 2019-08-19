@@ -1,0 +1,80 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+
+}
+.modal-overlay--active {
+    display: block;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+    &__close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+        background-color: $color-danger;
+        border: none;
+        cursor: pointer;
+    }
+    &__title {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    &__subtitle {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    &__label {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    &__input {
+        width: 100%;
+        padding: 6px 12px;
+        font-family: inherit;
+        font-size: 18px;
+        border: none;
+        border-bottom: 2px solid $color-placeholder;
+        transition: border-color 0.2s ease-in;
+        outline: none;
+        &:focus {
+            border-color: $color-main;
+        }
+        &::placeholder {
+            color: $color-placeholder;
+        }
+    }
+    &__placeholder {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        display: block;
+        color: $color-placeholder;
+        font-size: 18px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: transform 0.2s ease-in;
+    }
+    &__button {
+        width: 100%;
+        min-width: auto;
+    }
+}

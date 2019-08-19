@@ -230,6 +230,114 @@ img {
   line-height: 28px;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-overlay--active {
+  display: block;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: #ce3434;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__title {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.modal__subtitle {
+  display: block;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal__label {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal__input {
+  width: 100%;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid #606060;
+  -webkit-transition: border-color 0.2s ease-in;
+  transition: border-color 0.2s ease-in;
+  outline: none;
+}
+
+.modal__input:focus {
+  border-color: #2a94e2;
+}
+
+.modal__input::-webkit-input-placeholder {
+  color: #606060;
+}
+
+.modal__input:-ms-input-placeholder {
+  color: #606060;
+}
+
+.modal__input::-ms-input-placeholder {
+  color: #606060;
+}
+
+.modal__input::placeholder {
+  color: #606060;
+}
+
+.modal__placeholder {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  display: block;
+  color: #606060;
+  font-size: 18px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+
+.modal__button {
+  width: 100%;
+  min-width: auto;
+}
+
 .hero {
   position: relative;
   padding: 30px 0 70px;

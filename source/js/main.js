@@ -26,4 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    //modal window
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const modal = modalOverlay.querySelector('.modal');
+    const modalClose = modal.querySelector('.modal__close');
+
+    
 });
