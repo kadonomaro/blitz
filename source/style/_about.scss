@@ -43,7 +43,9 @@
         }
     }
     &__image {
+        max-width: 555px;
         float: left;
+        
     }
     &__thumbs {
         display: flex;
