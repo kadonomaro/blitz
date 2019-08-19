@@ -30,8 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //modal window
     const callModalButton = document.querySelectorAll('.js-call-request-button');
+    const viewModalButton = document.querySelectorAll('.js-view-request-button');
+
     const modalOverlay = document.querySelector('.modal-overlay');
     const modal = modalOverlay.querySelector('.modal');
+    const modalTitle = modal.querySelector('.modal__title');
+    const modalSubtitle = modal.querySelector('.modal__subtitle');
     const modalCloseButton = modal.querySelector('.modal__close');
     const modalInput = modal.querySelectorAll('.modal__input');
     const modalSendButton = modal.querySelector('.modal__button');
@@ -40,7 +44,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     callModalButton.forEach(button => {
         button.addEventListener('click', function () {
-            openModal();
+            openModal(
+                'Перезвоним Вам за 5 минут',
+                'Оставьте заявку и мы перезвоним за 5 минут, чтобы ответить на ваши вопросы',
+                'Жду звонка'
+            );
+        });
+    });
+
+    viewModalButton.forEach(button => {
+        
+        button.addEventListener('click', function () {
+            const apartTitle = this.parentNode.querySelector('.apartments-item__title').textContent;
+            openModal(
+                `${apartTitle}\nзапишитесь на просмотр недвижимости уже сегодня`,
+                'Оставьте ваши данные и наш менеджер свяжется с Вами в ближайшее время',
+                'Записаться'
+            );
         });
     });
 
@@ -63,7 +83,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    function openModal() {
+    function openModal(title, subtitle, submitText) {
+        modalTitle.textContent = title;
+        modalSubtitle.textContent = subtitle;
+        modalSendButton.textContent = submitText;
         modalOverlay.style.display = 'block';
         setTimeout(() => {
             modalOverlay.classList.add('modal-overlay--active');

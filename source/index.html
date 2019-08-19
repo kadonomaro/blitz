@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Blitz estate</title>
 </head>
-<body class="page page--pixel">
+<body class="page">
 
     <section class="hero">
         <div class="hero__background background"></div>
@@ -122,14 +122,15 @@
                             <div class="questions-block__col">
                                 <figure class="questions-block__question">
                                     <img src="image/questions/in-russia.jpg" alt="В России" class="questions-block__image">
+                                    <figcaption class="question-block__caption">В России</figcaption>
                                 </figure>
-                                <figcaption class="question-block__caption">В России</figcaption>
+                                
                             </div>
                             <div class="questions-block__col">
                                 <figure class="questions-block__question">
                                     <img src="image/questions/abroad.jpg" alt="За границей" class="questions-block__image">
+                                    <figcaption class="question-block__caption">За границей</figcaption>
                                 </figure>
-                                <figcaption class="question-block__caption">За границей</figcaption>
                             </div>
                         </div>
 
@@ -317,7 +318,7 @@
                                 </table>
                             </div>
                             
-                            <button class="apartments-item__button">Назначить просмотр</button>
+                            <button class="apartments-item__button js-view-request-button">Назначить просмотр</button>
                         </div>
                     </div>
                     <div class="apartments__item">
@@ -342,7 +343,7 @@
                                 </table>
                             </div>
                             
-                            <button class="apartments-item__button">Назначить просмотр</button>
+                            <button class="apartments-item__button js-view-request-button">Назначить просмотр</button>
                         </div>
                     </div>
                     <div class="apartments__item">
@@ -367,7 +368,7 @@
                                 </table>
                             </div>
                             
-                            <button class="apartments-item__button">Назначить просмотр</button>
+                            <button class="apartments-item__button js-view-request-button">Назначить просмотр</button>
                         </div>
                     </div>
                     <div class="apartments__item">
@@ -392,7 +393,7 @@
                                 </table>
                             </div>
                             
-                            <button class="apartments-item__button">Назначить просмотр</button>
+                            <button class="apartments-item__button js-view-request-button">Назначить просмотр</button>
                         </div>
                     </div>
                     <div class="apartments__item">
@@ -417,7 +418,7 @@
                                 </table>
                             </div>
                             
-                            <button class="apartments-item__button">Назначить просмотр</button>
+                            <button class="apartments-item__button js-view-request-button">Назначить просмотр</button>
                         </div>
                     </div>
                     <div class="apartments__item">
@@ -442,7 +443,7 @@
                                 </table>
                             </div>
                             
-                            <button class="apartments-item__button">Назначить просмотр</button>
+                            <button class="apartments-item__button js-view-request-button">Назначить просмотр</button>
                         </div>
                     </div>
                     <div class="apartments__item">
@@ -467,7 +468,7 @@
                                 </table>
                             </div>
                             
-                            <button class="apartments-item__button">Назначить просмотр</button>
+                            <button class="apartments-item__button js-view-request-button">Назначить просмотр</button>
                         </div>
                     </div>
                     <div class="apartments__item">
@@ -492,7 +493,7 @@
                                 </table>
                             </div>
                             
-                            <button class="apartments-item__button">Назначить просмотр</button>
+                            <button class="apartments-item__button js-view-request-button">Назначить просмотр</button>
                         </div>
                     </div>
                     <div class="apartments__item">
@@ -517,7 +518,7 @@
                                 </table>
                             </div>
                             
-                            <button class="apartments-item__button">Назначить просмотр</button>
+                            <button class="apartments-item__button js-view-request-button">Назначить просмотр</button>
                         </div>
                     </div>
                     <div class="apartments__item">
@@ -542,7 +543,7 @@
                                 </table>
                             </div>
                             
-                            <button class="apartments-item__button">Назначить просмотр</button>
+                            <button class="apartments-item__button js-view-request-button">Назначить просмотр</button>
                         </div>
                     </div>
                 </div>
@@ -824,10 +825,10 @@
             <span class="modal__title section-title">Перезвоним Вам за 5 минут</span>
             <span class="modal__subtitle">Оставьте заявку и мы перезвоним за 5 минут, чтобы ответить на ваши вопросы</span>
             <form action="" method="POST" class="modal__form">
-                <label for="" class="modal__label">
+                <label class="modal__label">
                     <input type="text" name="call-request-name" class="modal__input" placeholder="Ваше имя">
                 </label>
-                <label for="" class="modal__label">
+                <label class="modal__label">
                     <input type="tel" name="call-request-phone" class="modal__input" placeholder="Ваш телефон">
                 </label>
                 <button class="button modal__button">Жду звонка</button>
