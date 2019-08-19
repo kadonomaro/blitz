@@ -14,7 +14,7 @@
         height: 3px;
         background-color: $color-main;
         border-radius: 5px;
-        transition: transform 0.2s ease-in;
+        transition: transform 0.2s ease-in, opacity 0.2s ease-in, width 0.2s ease-in;
         &:not(:last-child) {
             margin-bottom: 10px;
         }
@@ -25,30 +25,60 @@
             width: 20px;
         }
     }
+    &__toggle--active &__toggle-line {
+        opacity: 0;
+
+        &:first-child {
+            width: 35px;
+            transform: translateY(13px) translateX(2.5px) rotate(45deg);
+            opacity: 1;
+        }
+        &:last-child {
+            width: 35px;
+            transform: translateY(-13px) translateX(2.5px) rotate(-45deg);
+            opacity: 1;
+        }
+    }
     &__wrapper {
         position: fixed;
         top: 0;
         left: 0;
         display: flex;
         flex-direction: column;
-        min-width: 320px;
+        width: 320px;
         height: 100vh;
-        padding: 20px;
+        padding-top: 20px;
         background-color: rgba($color: #000000, $alpha: 0.8);
-        transition: transform 0.3s ease-in;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in, visibility 0.3s;
+        visibility: hidden;
+    }
+    &__wrapper--active {
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform 0.3s ease-in, visibility 0s 0s;
     }
     &__list {
         flex-grow: 1;
         list-style-type: none;
     }
-    &__item {
-        margin-bottom: 20px;
-    }
     &__link {
+        width: 100%;
+        display: block;
+        padding: 15px 10px 15px 25px;
         color: #ffffff;
         text-decoration: none;
+        transition: color 0.2s ease-in, background-color 0.2s ease-in;
+        &:hover {
+            color: rgba($color: #000000, $alpha: 0.9);
+            background-color: $color-link-hover;
+        }
+    }
+    &__link--active {
+        background-color: $color-link-hover;
+        box-shadow: inset 0 0 7px rgba($color: #000000, $alpha: 0.5);
     }
     &__call {
-        
+        padding: 10px 20px;
     }
 }
