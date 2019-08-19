@@ -32,27 +32,53 @@ document.addEventListener('DOMContentLoaded', function () {
     const callModalButton = document.querySelectorAll('.js-call-request-button');
     const modalOverlay = document.querySelector('.modal-overlay');
     const modal = modalOverlay.querySelector('.modal');
-    const modalClose = modal.querySelector('.modal__close');
+    const modalCloseButton = modal.querySelector('.modal__close');
+    const modalInput = modal.querySelectorAll('.modal__input');
+    const modalSendButton = modal.querySelector('.modal__button');
+    const modalInfo = modal.querySelector('.modal__info');
+
 
     callModalButton.forEach(button => {
         button.addEventListener('click', function () {
-            modalOverlay.style.display = 'block';
-            setTimeout(() => {
-                modalOverlay.classList.add('modal-overlay--active');
-            }, 10);
-            
-            document.body.classList.add('page--modal-is-open');
+            openModal();
         });
     });
 
-    modalClose.addEventListener('click', function () {
+    modalOverlay.addEventListener('click', function (evt) {
+        if (evt.target === this || evt.target === modalCloseButton) {
+            closeModal();
+        }        
+    });
+
+    modalSendButton.addEventListener('click', function (evt) {
+        modalInput.forEach(input => {
+            if (!input.value.length) {
+                evt.preventDefault();
+                modalInfo.style.display = 'block';
+                modalInfo.textContent = 'Заполните оба поля';
+                setTimeout(() => {
+                    modalInfo.style.display = 'none';
+                }, 3000);
+            }
+        });
+    });
+
+    function openModal() {
+        modalOverlay.style.display = 'block';
+        setTimeout(() => {
+            modalOverlay.classList.add('modal-overlay--active');
+        }, 10);
+        document.body.classList.add('page--modal-is-open');
+    }
+
+    function closeModal() {
         modalOverlay.classList.remove('modal-overlay--active');
         setTimeout(() => {
             modalOverlay.style.display = 'none';
         }, 300);
         document.body.classList.remove('page--modal-is-open');
-    });
-
+    }
+    
 
     //about custom slider
     const aboutImages = document.querySelectorAll('.about__image');
@@ -72,6 +98,13 @@ document.addEventListener('DOMContentLoaded', function () {
             aboutTrack.style.transform = `translateX(-${trackWidth * index}px)`;
         });
     });
+
+
+    //apartments filter
+    const filterButtons = document.querySelectorAll('.js-filter-button');
+    const filterApartments = document.querySelectorAll('.apartments__item');
+
     
+
 
 });

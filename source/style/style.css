@@ -356,6 +356,17 @@ img {
   min-width: auto;
 }
 
+.modal__info {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 5px;
+  display: block;
+  color: #ce3434;
+  font-weight: bold;
+  text-align: center;
+}
+
 .hero {
   position: relative;
   padding: 30px 0 70px;
