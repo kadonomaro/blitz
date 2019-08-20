@@ -25,6 +25,11 @@
             width: 20px;
         }
     }
+    &__toggle--active {
+        position: fixed;
+        z-index: 99;
+        top: 76px;
+    }
     &__toggle--active &__toggle-line {
         opacity: 0;
 
@@ -41,6 +46,7 @@
     }
     &__wrapper {
         position: fixed;
+        z-index: 99;
         top: 0;
         left: 0;
         display: flex;

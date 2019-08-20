@@ -101,12 +101,13 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
     //about custom slider
+    const aboutImagesContainer = document.querySelector('.about__images');
     const aboutImages = document.querySelectorAll('.about__image');
     const aboutTrack = document.querySelector('.about__images-track');
     const aboutThumbs = document.querySelectorAll('.about__thumb');
     const trackWidth = aboutTrack.clientWidth;
 
-    aboutTrack.style.width = aboutTrack.clientWidth * aboutImages.length + 'px';
+    aboutTrack.style.width = aboutImagesContainer.clientWidth * aboutImages.length + 'px';
 
     aboutThumbs.forEach((thumb, index) => {
         thumb.addEventListener('click', function () {
@@ -147,8 +148,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //apartments filter
-    const filterButtons = document.querySelectorAll('.js-filter-button');
+    const filterButtons = document.querySelectorAll('[data-filter]');
     const filterApartments = document.querySelectorAll('.apartments__item');
+
+    filterItems();
+
+    function filterItems() {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                filterButtons.forEach(button => {
+                    button.classList.remove('apartments-filter__button--active');
+                });
+                this.classList.add('apartments-filter__button--active');
+
+                const [min, max] = this.dataset.filter.split('-');
+                filterApartments.forEach(apart => {
+                    const apartPrice = apart.querySelector('.apartments-item__price').textContent.replace(/\s/g, '');
+
+                    if (+apartPrice >= min && +apartPrice <= max) {
+                        apart.style.display = 'block';
+                    } else {
+                        apart.style.display = 'none';
+                    }
+                });
+                
+            });
+        });
+    }
+
+
 
     
 });

@@ -470,6 +470,12 @@ img {
   width: 20px;
 }
 
+.main-nav__toggle--active {
+  position: fixed;
+  z-index: 99;
+  top: 76px;
+}
+
 .main-nav__toggle--active .main-nav__toggle-line {
   opacity: 0;
 }
@@ -490,6 +496,7 @@ img {
 
 .main-nav__wrapper {
   position: fixed;
+  z-index: 99;
   top: 0;
   left: 0;
   display: -webkit-box;
@@ -808,6 +815,10 @@ img {
   background-color: #1d87d5;
 }
 
+.apartments {
+  overflow: hidden;
+}
+
 .apartments__inner {
   padding: 30px 0 60px;
 }
@@ -849,13 +860,13 @@ img {
 }
 
 .apartments__item:nth-child(odd) {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-70%);
+          transform: translateX(-70%);
 }
 
 .apartments__item:nth-child(even) {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(70%);
+          transform: translateX(70%);
 }
 
 .apartments__item--visible {
@@ -873,6 +884,14 @@ img {
 }
 
 .apartments-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   -webkit-transition: -webkit-box-shadow 0.3s ease-in;
   transition: -webkit-box-shadow 0.3s ease-in;
   transition: box-shadow 0.3s ease-in;
@@ -885,6 +904,9 @@ img {
 }
 
 .apartments-item__text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 25px 30px;
 }
 
