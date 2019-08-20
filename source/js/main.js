@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    //navigation menu open/hide
     const navToggle = document.querySelector('.js-nav-toggle');
     const nav = document.querySelector('.js-nav');
     const navLinks = nav.querySelectorAll('.js-nav-link');
 
-
-    //nav open/hide
     navToggle.addEventListener('click', function (evt) {
         evt.preventDefault();
         this.classList.toggle('main-nav__toggle--active');
@@ -41,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalSendButton = modal.querySelector('.modal__button');
     const modalInfo = modal.querySelector('.modal__info');
 
-
     callModalButton.forEach(button => {
         button.addEventListener('click', function () {
             openModal(
@@ -53,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     viewModalButton.forEach(button => {
-        
         button.addEventListener('click', function () {
             const apartTitle = this.parentNode.querySelector('.apartments-item__title').textContent;
             openModal(
@@ -111,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     aboutTrack.style.width = aboutTrack.clientWidth * aboutImages.length + 'px';
 
-
     aboutThumbs.forEach((thumb, index) => {
         thumb.addEventListener('click', function () {
             aboutThumbs.forEach(thumb => {
@@ -123,11 +119,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    //Apartments fade-in scroll animation
+    const apartmentsItem = document.querySelectorAll('.apartments__item');
+    fadeInAnimation(apartmentsItem, 'apartments__item--visible');
+
+    function fadeInAnimation(elements, className) {
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        function callback(items, observer) {
+            items.forEach(item => {
+                if (item.intersectionRatio > 0) {
+                    item.target.classList.add(className);
+                }
+            });
+        }
+
+        let observer = new IntersectionObserver(callback, options);
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    }
+
+
     //apartments filter
     const filterButtons = document.querySelectorAll('.js-filter-button');
     const filterApartments = document.querySelectorAll('.apartments__item');
 
     
-
-
 });

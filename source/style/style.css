@@ -841,6 +841,35 @@ img {
   max-width: calc((100% / 12 * 6) - (15px * 2));
   margin-right: 15px;
   margin-left: 15px;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease-in, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.7s ease-in, -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.7s ease-in;
+  transition: transform 0.5s ease-in-out, opacity 0.7s ease-in, -webkit-transform 0.5s ease-in-out;
+}
+
+.apartments__item:nth-child(odd) {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.apartments__item:nth-child(even) {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.apartments__item--visible {
+  opacity: 1;
+}
+
+.apartments__item--visible:nth-child(odd) {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.apartments__item--visible:nth-child(even) {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .apartments-item {
