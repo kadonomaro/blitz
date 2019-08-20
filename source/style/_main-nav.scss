@@ -27,7 +27,7 @@
     }
     &__toggle--active {
         position: fixed;
-        z-index: 99;
+        z-index: 109;
         top: 76px;
     }
     &__toggle--active &__toggle-line {
@@ -54,7 +54,7 @@
         width: 320px;
         height: 100vh;
         padding-top: 20px;
-        background-color: rgba($color: #000000, $alpha: 0.8);
+        background-color: rgba($color: #000000, $alpha: 0.9);
         transform: translateX(-100%);
         transition: transform 0.3s ease-in, visibility 0.3s;
         visibility: hidden;
@@ -86,5 +86,18 @@
     }
     &__call {
         padding: 10px 20px;
+    }
+}
+
+
+@include media(1600) {
+    .main-nav {
+        &__toggle {
+            top: 15px;
+            left: 270px;
+        }
+        &__wrapper {
+            padding-top: 60px;
+        }
     }
 }

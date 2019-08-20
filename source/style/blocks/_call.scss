@@ -22,3 +22,16 @@
 .call--light {
     color: #ffffff;
 }
+
+
+
+@include media($size-tablet) {
+    .call {
+        &__phone {
+            font-size: 24px;
+        }
+        &__mail {
+            font-size: 20px;
+        }
+    }
+}

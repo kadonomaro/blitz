@@ -33,7 +33,6 @@ img {
 .page--modal-is-open {
     padding-right: 17px;
     overflow: hidden;
-
 }
 
 
@@ -85,3 +84,8 @@ img {
 }
 
 
+@include media(1024) {
+    .page--modal-is-open {
+        padding-right: 0;
+    }
+}

@@ -21,6 +21,18 @@
         padding-left: 20px;
         padding-top: 20px;
         line-height: 28px;
+    }
+}
 
+
+
+@include media($size-tablet){
+    .features {
+        &__num {
+            font-size: 60px;
+        }
+        &__text {
+            padding-top: 0;
+        }
     }
 }

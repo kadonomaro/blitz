@@ -1,11 +1,11 @@
 .leader {
     background-color: $color-background-light;
-    background-image: url('../image/leader/leader.png');
-    background-repeat: no-repeat;
-    background-position: bottom right 380px;
     &__inner {
         display: flex;
         padding: 50px 0 60px;
+        background-image: url('../image/leader/leader.png');
+        background-repeat: no-repeat;
+        background-position: bottom right;
     }
     &__main {
         @include flex-columns(7);
@@ -31,5 +31,28 @@
     &__button {
         font-size: 20px;
     }
+}
 
+
+@include media($size-tablet) {
+    .leader {
+        &__inner {
+            display: flex;
+            padding: 20px 0;
+            background-size: contain;
+            background-position-y: 20px;
+        }
+        &__title {
+            margin-bottom: 15px;
+        }
+        &__name {
+            margin-bottom: 15px;
+        }
+        &__desc {
+            margin-bottom: 15px;
+        }
+        &__desc p:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
 }

@@ -80,7 +80,7 @@
         }
         &__list {
             grid-template-rows: repeat(3, 300px);
-            grid-template-columns: repeat(3, 33.3333%);
+            grid-template-columns: repeat(3, calc(33.3333% - 7px));
         }
         &__item {
 

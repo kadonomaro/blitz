@@ -78,6 +78,12 @@ img {
   letter-spacing: -0.1px;
 }
 
+@media screen and (max-width: 1024px) {
+  .page--modal-is-open {
+    padding-right: 0;
+  }
+}
+
 @font-face {
   font-family: 'Geometria';
   src: url("../fonts/Geometria-Bold.woff2") format("woff2"), url("../fonts/Geometria-Bold.woff") format("woff");
@@ -202,6 +208,15 @@ img {
   color: #ffffff;
 }
 
+@media screen and (max-width: 1023px) {
+  .call__phone {
+    font-size: 24px;
+  }
+  .call__mail {
+    font-size: 20px;
+  }
+}
+
 .features__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -233,6 +248,15 @@ img {
   padding-left: 20px;
   padding-top: 20px;
   line-height: 28px;
+}
+
+@media screen and (max-width: 1023px) {
+  .features__num {
+    font-size: 60px;
+  }
+  .features__text {
+    padding-top: 0;
+  }
 }
 
 .modal-overlay {
@@ -488,7 +512,7 @@ img {
 
 .main-nav__toggle--active {
   position: fixed;
-  z-index: 99;
+  z-index: 109;
   top: 76px;
 }
 
@@ -525,7 +549,7 @@ img {
   width: 320px;
   height: 100vh;
   padding-top: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: visibility 0.3s, -webkit-transform 0.3s ease-in;
@@ -575,6 +599,16 @@ img {
 
 .main-nav__call {
   padding: 10px 20px;
+}
+
+@media screen and (max-width: 1600px) {
+  .main-nav__toggle {
+    top: 15px;
+    left: 270px;
+  }
+  .main-nav__wrapper {
+    padding-top: 60px;
+  }
 }
 
 .questions__inner {
@@ -833,8 +867,8 @@ img {
   .services__list {
     -ms-grid-rows: (300px)[3];
         grid-template-rows: repeat(3, 300px);
-    -ms-grid-columns: (33.3333%)[3];
-        grid-template-columns: repeat(3, 33.3333%);
+    -ms-grid-columns: (calc(33.3333% - 7px))[3];
+        grid-template-columns: repeat(3, calc(33.3333% - 7px));
   }
   .services__item:first-child {
     -ms-grid-column: 1;
@@ -1088,13 +1122,6 @@ img {
 }
 
 @media screen and (max-width: 1023px) {
-  .apartments-filter__button {
-    width: 100%;
-    padding: 15px 10px;
-  }
-  .apartments {
-    overflow: hidden;
-  }
   .apartments__inner {
     padding: 20px 0 20px;
   }
@@ -1108,9 +1135,6 @@ img {
     margin-bottom: 20px;
   }
   .apartments-item__text {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
     padding: 15px 20px;
   }
   .apartments-item__subtitle {
@@ -1371,11 +1395,40 @@ img {
   background-position: -1640px 0;
 }
 
+@media screen and (max-width: 1023px) {
+  .agency__inner {
+    padding: 20px 0;
+  }
+  .agency__title {
+    margin-bottom: 15px;
+  }
+  .agency__item {
+    margin-bottom: 15px;
+  }
+  .agency__col {
+    padding: 5px;
+  }
+  .agency__link {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .agency-item {
+    padding: 15px 25px;
+  }
+  .agency-item::before {
+    top: 50px;
+  }
+  .agency-item__title {
+    margin-bottom: 50px;
+    font-size: 18px;
+  }
+  .agency-item__phone {
+    font-size: 20px;
+  }
+}
+
 .leader {
   background-color: #EEF3FA;
-  background-image: url("../image/leader/leader.png");
-  background-repeat: no-repeat;
-  background-position: bottom right 380px;
 }
 
 .leader__inner {
@@ -1383,6 +1436,9 @@ img {
   display: -ms-flexbox;
   display: flex;
   padding: 50px 0 60px;
+  background-image: url("../image/leader/leader.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .leader__main {
@@ -1417,6 +1473,29 @@ img {
 
 .leader__button {
   font-size: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+  .leader__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px 0;
+    background-size: contain;
+    background-position-y: 20px;
+  }
+  .leader__title {
+    margin-bottom: 15px;
+  }
+  .leader__name {
+    margin-bottom: 15px;
+  }
+  .leader__desc {
+    margin-bottom: 15px;
+  }
+  .leader__desc p:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .main-footer {
@@ -1465,5 +1544,24 @@ img {
 .main-footer__call {
   color: #ffffff;
   text-align: right;
+}
+
+@media screen and (max-width: 1023px) {
+  .main-footer__inner {
+    padding: 20px 0;
+  }
+  .main-footer__col {
+    width: 33.3333%;
+    padding: 0 5px;
+  }
+  .main-footer__text {
+    font-size: 12px;
+  }
+  .main-footer__text:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .main-footer__text:nth-child(2) {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -34,3 +34,26 @@
         text-align: right;
     }
 }
+
+
+
+@include media($size-tablet) {
+    .main-footer {
+        &__inner {
+            padding: 20px 0;
+        }
+        &__col {
+            width: 33.3333%;
+            padding: 0 5px;
+        }
+        &__text {
+            font-size: 12px;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+            &:nth-child(2) {
+                font-size: 14px;
+            }
+        }
+    }
+}
