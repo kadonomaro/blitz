@@ -122,3 +122,47 @@
         }
     }
 }
+
+
+
+@include media($size-tablet) {
+    .apartments-filter {
+        &__button {
+            width: 100%;
+            padding: 15px 10px;
+
+        }
+    }
+    
+
+    .apartments {
+        overflow: hidden;
+        &__inner {
+            padding: 20px 0 20px;
+        }
+        &__title {
+            margin-bottom: 15px;
+        }
+        &__subtitle {
+            margin-bottom: 20px;
+        }
+        &__filter {
+            margin-bottom: 20px;
+        }
+    }
+    
+    
+    .apartments-item {
+
+        &__text {
+            flex-grow: 1;
+            padding: 15px 20px;
+        }
+        &__subtitle {
+            margin-bottom: 10px;
+        }
+        &__price {
+            font-size: 26px;
+        }
+    }
+}

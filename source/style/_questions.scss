@@ -92,3 +92,58 @@
         }
     }
 }
+
+
+
+@include media($size-tablet) {
+    .questions {
+
+        &__inner {
+            padding: 20px 0 20px;
+        }
+        &__title {
+            margin-bottom: 15px;
+        }
+        &__subtitle {
+            margin-bottom: 30px;
+        }
+    }
+    
+    
+    .questions-block {
+
+        &__main {
+            padding: 25px;
+        }
+        &__title {
+            display: block;
+            margin-bottom: 20px;
+        }
+        &__row {
+            margin-bottom: 15px;
+        }
+        &__col {
+            margin: 0 15px;
+            text-align: center;
+        }
+        &__image {
+            margin-bottom: 15px;
+        }    
+        &__side {
+            padding: 25px;
+        }
+    }
+    
+    
+    .questions-features {
+    
+        &__item {
+            padding-left: 65px;
+            line-height: 20px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+        }
+    }
+}

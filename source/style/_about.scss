@@ -74,3 +74,15 @@
         }
     }
 }
+
+
+@include media($size-tablet) {
+    .about {
+        &__inner {
+            padding: 20px 0 20px;
+        }
+        &__title {
+            margin-top: 0;
+        }
+    }
+}
