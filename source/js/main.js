@@ -105,9 +105,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const aboutImages = document.querySelectorAll('.about__image');
     const aboutTrack = document.querySelector('.about__images-track');
     const aboutThumbs = document.querySelectorAll('.about__thumb');
-    const trackWidth = aboutTrack.clientWidth;
 
     aboutTrack.style.width = aboutImagesContainer.clientWidth * aboutImages.length + 'px';
+    imageResize(aboutImages, aboutTrack, aboutImagesContainer);
+    
+    window.addEventListener('resize', function () {
+        imageResize(aboutImages, aboutTrack, aboutImagesContainer);
+    });
+
+    function imageResize(images, track, sizeSource) {
+        track.style.width = sizeSource.clientWidth * images.length + 'px';
+        images.forEach(image => {
+            image.style.maxWidth = sizeSource.clientWidth + 'px';
+        });
+    }
 
     aboutThumbs.forEach((thumb, index) => {
         thumb.addEventListener('click', function () {
@@ -115,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 thumb.classList.remove('about__thumb--active');
             });
             this.classList.add('about__thumb--active');
-            aboutTrack.style.transform = `translateX(-${trackWidth * index}px)`;
+            aboutTrack.style.transform = `translateX(-${aboutImagesContainer.clientWidth * index}px)`;
         });
     });
 
@@ -131,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
             threshold: 0.1
         };
 
-        function callback(items, observer) {
+        function callback(items) {
             items.forEach(item => {
                 if (item.intersectionRatio > 0) {
                     item.target.classList.add(className);
