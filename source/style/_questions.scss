@@ -88,7 +88,8 @@
             left: 0;
             width: 35px;
             height: 35px;
-            background: url('../icons/check.svg');
+            background-image: url('../icons/check.svg');
+            background-size: cover;
         }
     }
 }
@@ -113,24 +114,19 @@
     .questions-block {
 
         &__main {
-            padding: 25px;
+            padding: 20px;
         }
         &__title {
-            display: block;
             margin-bottom: 20px;
         }
         &__row {
             margin-bottom: 15px;
         }
-        &__col {
-            margin: 0 15px;
-            text-align: center;
-        }
         &__image {
             margin-bottom: 15px;
         }    
         &__side {
-            padding: 25px;
+            padding: 20px;
         }
     }
     
@@ -138,12 +134,15 @@
     .questions-features {
     
         &__item {
-            padding-left: 65px;
+            padding-left: 40px;
             line-height: 20px;
             &:not(:last-child) {
                 margin-bottom: 20px;
             }
-
+            &::before {
+                width: 25px;
+                height: 25px;
+            }
         }
     }
 }

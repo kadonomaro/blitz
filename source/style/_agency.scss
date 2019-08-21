@@ -21,6 +21,7 @@
     }
     &__col {
         width: 33.3333%;
+        padding: 0 10px;
     }
     &__link {
         display: block;
@@ -33,6 +34,8 @@
 
 .agency-item {
     position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     padding: 30px 50px 25px;
     background-image: url('../icons/card-decal.svg');
@@ -51,6 +54,7 @@
         background-repeat: no-repeat;
     }
     &__title {
+        flex-grow: 1;
         margin-bottom: 70px;
         font-size: 22px;
         font-weight: 900;
@@ -134,15 +138,11 @@
         &__inner {
             padding: 20px 0;
         }
-    
         &__title {
             margin-bottom: 15px;
         }
         &__item {
             margin-bottom: 15px;
-        }
-        &__col {
-            padding: 5px;
         }
         &__link {
             font-size: 16px;
@@ -155,6 +155,8 @@
         padding: 15px 25px;
         &::before {
             top: 50px;
+            right: 0;
+            transform: scale(0.8);
         }
         &__title {
             margin-bottom: 50px;

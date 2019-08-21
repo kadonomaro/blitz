@@ -13,3 +13,15 @@
         text-align: right;
     }
 }
+
+
+@include media($size-tablet) {
+    .main-header {
+        &__col {
+            width: 40%;
+            &:first-child {
+                width: 20%;
+            }
+        }
+    }
+}

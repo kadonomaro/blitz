@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
         evt.preventDefault();
         this.classList.toggle('main-nav__toggle--active');
         nav.classList.toggle('main-nav__wrapper--active');
+        if (!this.classList.contains('main-nav__toggle--active')) {
+            navLinks.forEach(link => {
+                link.classList.remove('main-nav__link--active');
+            });
+        }
     });
 
 

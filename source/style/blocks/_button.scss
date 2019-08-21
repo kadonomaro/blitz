@@ -1,6 +1,6 @@
 .button {
     min-width: 270px;
-    padding: 14px 0 15px;
+    padding: 14px 10px 15px;
     font-family: inherit;
     font-size: inherit;
     font-weight: bold;
@@ -28,7 +28,7 @@
 
 .button--size-big {
     min-width: 360px;
-    padding: 20px 0 20px;
+    padding: 20px 10px 20px;
     font-size: 20px;
     line-height: 28px;
 }
@@ -44,4 +44,12 @@
 
 .button--text-light {
     color: #ffffff;
+}
+
+
+@include media($size-tablet) {
+    .button {
+        min-width: 200px;
+    }
+    
 }
