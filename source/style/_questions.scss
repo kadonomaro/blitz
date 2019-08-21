@@ -112,7 +112,7 @@
     
     
     .questions-block {
-
+        
         &__main {
             padding: 20px;
         }
@@ -127,6 +127,9 @@
         }    
         &__side {
             padding: 20px;
+        }
+        &__footer {
+            align-items: center;
         }
     }
     
@@ -144,5 +147,33 @@
                 height: 25px;
             }
         }
+    }
+}
+
+
+@include media($size-mobile) {
+    .questions-block {
+        display: block;
+        &__title {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        &__main {
+            padding: 10px;
+        }
+        &__side {
+            padding: 10px;
+            border-left: 0;
+            border-top: 3px solid $color-border;
+        }
+        &__row {
+            margin: 0 -5px 10px;
+        }
+        &__col {
+            margin: 0 5px;
+        }
+    }
+    .questions-features {
+        font-size: 14px;
     }
 }

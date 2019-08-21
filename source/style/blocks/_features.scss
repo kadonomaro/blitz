@@ -36,3 +36,30 @@
         }
     }
 }
+
+
+@include media($size-mobile) {
+    .hero {
+        &__button {
+            width: 100%;
+        }
+    }
+
+    .features {
+
+        &__list {
+            display: block;
+        }
+        &__item {
+            max-width: 100%;
+            margin-bottom: 10px;
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+        &__num {
+            width: 40%;
+            font-size: 36px;
+        }
+    }
+}

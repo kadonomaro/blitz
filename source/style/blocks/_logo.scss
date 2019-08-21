@@ -11,3 +11,12 @@
 .logo--light .logo__icon {
     background-image: url('../image/logo-light.svg');
 }
+
+
+@include media($size-tablet) {
+    .logo {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+}

@@ -105,6 +105,10 @@
     }
     &__price {
         font-size: 33px;
+        &::after {
+            content: ' \20BD';
+            
+        }
     }
     &__button {
         width: 100%;
@@ -161,6 +165,49 @@
         }
         &__price {
             font-size: 26px;
+        }
+    }
+}
+
+
+@include media($size-mobile){
+    .apartments-filter {
+        
+        &__list {
+            display: block;
+        }
+        &__item {
+            border-right-width: 2px;
+            border-bottom-width: 0;
+            &:last-child {
+                border-bottom-width: 2px; 
+            }
+        }
+    }
+
+    .apartments {
+        &__list {
+            display: block;
+        }
+        &__item {
+            max-width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+    .apartments-item {
+        &__text {
+            padding: 5px 10px;
+        }
+        &__title {
+            font-size: 16px;
+        }
+        &__price {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        &__button {
+            padding: 10px;
+            font-size: 16px;
         }
     }
 }

@@ -95,3 +95,13 @@ img {
         font-size: 18px;
     }
 }
+
+
+@include media ($size-mobile) {
+    .section-title {
+        font-size: 20px;
+    }
+    .section-subtitle {
+        font-size: 16px;
+    }
+}

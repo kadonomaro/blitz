@@ -86,3 +86,23 @@
         }
     }
 }
+
+
+@include media($size-mobile) {
+    .about {
+        &__inner {
+            display: block;
+        }
+        &__col {
+            flex-basis: auto;
+            max-width: 100%;
+        }
+        &__title {
+            line-height: 24px;
+        }
+        &__button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+}
