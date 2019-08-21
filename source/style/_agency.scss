@@ -197,6 +197,8 @@
 
     .agency-item {
         &::before {
+            top: auto;
+            bottom: 0;
             right: -30px;
             opacity: 0.5;
             transform: scale(0.5);

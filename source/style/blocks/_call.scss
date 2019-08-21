@@ -36,8 +36,8 @@
     }
 }
 
-@include media($size-mobile) {
 
+@include media($size-mobile) {
     .call {
         &__phone {
             margin-bottom: 10px;

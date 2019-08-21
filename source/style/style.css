@@ -467,7 +467,7 @@ img {
     top: 50%;
     right: 10px;
     left: 10px;
-    padding: 35px 10px 10px;
+    padding: 35px 10px 25px;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
   }
@@ -727,6 +727,13 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  .main-nav__toggle {
+    left: auto;
+    right: 10px;
+  }
+  .main-nav__wrapper {
+    width: 100%;
+  }
   .main-nav__call {
     text-align: center;
   }
@@ -1638,6 +1645,8 @@ img {
     line-height: 1.6;
   }
   .agency-item::before {
+    top: auto;
+    bottom: 0;
     right: -30px;
     opacity: 0.5;
     -webkit-transform: scale(0.5);

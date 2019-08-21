@@ -92,6 +92,7 @@
 
 @include media(1600) {
     .main-nav {
+
         &__toggle {
             top: 15px;
             left: 270px;
@@ -105,7 +106,14 @@
 
 @include media($size-mobile){
     .main-nav {
-
+        
+        &__toggle {
+            left: auto;
+            right: 10px;
+        }
+        &__wrapper {
+            width: 100%;
+        }
         &__call {
             text-align: center;    
         }
