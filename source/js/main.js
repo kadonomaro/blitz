@@ -193,6 +193,54 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
+    //scroll to each section
+    const presentationButton = document.querySelector('.hero__button');
+    const sections = document.querySelectorAll('section:not(:first-child)');
 
+    presentationScroll(presentationButton, sections);
+
+    function presentationScroll(actionButton, sections, scrollSpeed = 3000) {
+        actionButton.addEventListener('click', function (evt) {
+            evt.preventDefault();
+
+            const sectionScrollSettings = {
+                behavior: "smooth"
+            };
+            
+            let sectionCounter = 0;
     
+            sections[sectionCounter].scrollIntoView(sectionScrollSettings);
+            sectionCounter++;
+            let scrollInterval = setInterval(() => {
+                sections[sectionCounter].scrollIntoView(sectionScrollSettings);
+                sectionCounter++;
+                if (sectionCounter >= sections.length) {
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }, scrollSpeed);
+    
+                    clearInterval(scrollInterval);
+                }
+            }, scrollSpeed);
+    
+            window.addEventListener('mousedown', userActionHandler);
+            window.addEventListener('touchstart', userActionHandler);
+            window.addEventListener('mousewheel', userActionHandler);
+            window.addEventListener('keydown', userActionHandler);
+    
+            function userActionHandler() {
+                clearInterval(scrollInterval);
+                window.removeEventListener('mousedown', userActionHandler);
+                window.removeEventListener('touchstart', userActionHandler);
+                window.removeEventListener('mousewheel', userActionHandler);
+                window.removeEventListener('keydown', userActionHandler);
+            }
+        });
+    }
+
+
+
 });
