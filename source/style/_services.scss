@@ -83,7 +83,6 @@
         }
     }
 
-
     .service {
         padding: 10px; 
         &__title {
@@ -93,6 +92,30 @@
         &__desc {
             margin-bottom: 15px;
             line-height: 20px;
+        }
+    }
+}
+
+
+@include media($size-mobile) {
+    .services {
+
+        &__inner {
+            padding: 10px 0;
+        }
+        &__list {
+            display: block;
+        }
+        &__item {
+            margin-bottom: 10px;
+        }
+    }
+
+    .service {
+        min-height: 200px;
+        text-shadow: 0 0 3px black;
+        &__text {
+            max-height: none;
         }
     }
 }

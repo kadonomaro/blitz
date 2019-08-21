@@ -15,3 +15,18 @@
 }
 
 
+@include media($size-mobile) {
+    .main-header {
+        display: block;
+        &__nav {
+            margin-bottom: 10px;
+        }
+        &__col {
+            width: 100%;
+        }
+        &__call {
+            margin-top: 0;
+            text-align: center;
+        }
+    }
+}

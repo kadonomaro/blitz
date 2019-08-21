@@ -35,3 +35,17 @@
         }
     }
 }
+
+@include media($size-mobile) {
+
+    .call {
+        &__phone {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        &__mail {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+    }
+}

@@ -62,3 +62,25 @@
         }
     }
 }
+
+
+@include media($size-mobile) {
+    .leader {
+        &__inner {
+            background-position-y: 100%;
+        }
+        &__title {
+            line-height: 1.2;
+        }
+        &__name {
+            font-size: 18px;
+        }
+        &__desc {
+            font-size: 14px;
+            line-height: 1.2;
+        }
+        &__button {
+            width: 100%;
+        }
+    }
+}

@@ -13,10 +13,18 @@
 }
 
 
+
 @include media($size-tablet) {
     .logo {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
+    }
+}
+
+
+@include media($size-mobile){
+    .logo {
+        flex-wrap: nowrap;
     }
 }

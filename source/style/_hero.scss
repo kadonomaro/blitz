@@ -44,7 +44,6 @@
 
 @include media($size-tablet) {
     .hero {
-        position: relative;
         padding: 10px 0 30px;
         &__features {
             margin-bottom: 20px;
@@ -62,7 +61,7 @@
 
 @include media($size-mobile) {
     .hero {
-
+        padding: 10px 0;
         &__title {
             font-size: 24px;
             line-height: 32px;

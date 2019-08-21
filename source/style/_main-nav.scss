@@ -101,3 +101,13 @@
         }
     }
 }
+
+
+@include media($size-mobile){
+    .main-nav {
+
+        &__call {
+            text-align: center;    
+        }
+    }
+}

@@ -100,7 +100,7 @@
     .questions {
 
         &__inner {
-            padding: 20px 0 20px;
+            padding: 20px 0;
         }
         &__title {
             margin-bottom: 15px;
@@ -152,6 +152,11 @@
 
 
 @include media($size-mobile) {
+    .questions {
+        &__inner {
+            padding: 10px 0;
+        }
+    }
     .questions-block {
         display: block;
         &__title {

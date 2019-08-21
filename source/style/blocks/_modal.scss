@@ -1,5 +1,6 @@
 .modal-overlay {
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     display: none;
@@ -18,7 +19,7 @@
     top: 50%;
     left: 50%;
     max-width: 400px;
-    padding: 30px;
+    padding: 35px 30px 30px;
     background-color: #ffffff;
     transform: translate(-50%, -50%);
     &__close {
@@ -95,5 +96,17 @@
         color: $color-danger;
         font-weight: bold;
         text-align: center;
+    }
+}
+
+
+
+@include media($size-mobile){
+    .modal {
+        top: 50%;
+        right: 10px;
+        left: 10px;
+        padding: 35px 10px 10px;
+        transform: translate(0, -50%);
     }
 }

@@ -57,3 +57,28 @@
         }
     }
 }
+
+
+@include media($size-mobile){
+    .main-footer {
+        &__inner {
+            display: block;
+            padding: 10px 0;
+        }
+        &__col {
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+        &__text {
+            line-height: 18px;
+        }
+        &__logo {
+            padding: 0;
+        }
+        &__call {
+            text-align: center;
+        }
+    }
+}
