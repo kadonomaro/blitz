@@ -26,10 +26,10 @@
         line-height: 33px;
     }
     &__slider {
+        margin-bottom: 30px;
         overflow: hidden;
     }
     &__track {
-        margin-bottom: 30px;
         transition: transform 0.5s ease-in;
         &::after {
             content: '';
@@ -65,7 +65,7 @@
             background-color: rgba($color: #000000, $alpha: 0.5);
             background-image: url('../icons/draw-check-mark.svg');
             background-repeat: no-repeat;
-            background-size: 100px;
+            background-size: 30%;
             background-position: center;
             transition: opacity 0.3s ease-in;
             opacity: 0;
@@ -103,7 +103,15 @@
             transform: translateY(-50%);
         }
     }
-
+    &__next--disabled {
+        opacity: 0.5;
+    }
+    &__output,
+    &__text {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
     &__side {
         flex-shrink: 0;
         max-width: 370px;

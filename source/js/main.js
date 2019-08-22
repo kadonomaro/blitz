@@ -235,7 +235,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //questions block
-
     const questionsBlock = document.querySelector('.questions-block');
     const questionsImage = questionsBlock.querySelectorAll('.questions-block__image');
     const questionsNext = questionsBlock.querySelector('.questions-block__next');
@@ -243,8 +242,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const questionsSliderSlide = questionsBlock.querySelectorAll('.questions-block__slide');
     const questionsCurrent = questionsBlock.querySelector('.questions-block__result-current');
     const questionsTotal = questionsBlock.querySelector('.questions-block__result-total');
+    const questionsOutputDOM = questionsBlock.querySelector('.questions-block__output');
     let currentSlide = 1;
     let questionChecked = false;
+    let questionsOutputItem = '';
+    const questionsOutput = [];
+
+    questionsTotal.textContent = questionsSliderSlide.length - 1;
 
     questionsImage.forEach(image => {
         image.addEventListener('click', function () {
@@ -252,7 +256,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 image.classList.remove('questions-block__image--checked');
             });
             this.classList.add('questions-block__image--checked');
+            questionsNext.classList.remove('questions-block__next--disabled');
             questionChecked = true;
+            questionsOutputItem = this.nextElementSibling.textContent.toLowerCase();
         });
     });
 
@@ -268,10 +274,18 @@ document.addEventListener('DOMContentLoaded', function () {
             currentSlide++;
             questionChecked = false;
             questionsCurrent.textContent = currentSlide - 1;
+            questionsOutput.push(questionsOutputItem);
+            console.log(questionsOutput);
         }
-        
+        this.classList.add('questions-block__next--disabled');
+
+        if (currentSlide === questionsSliderSlide.length) {
+            this.style.display = 'none';
+            questionsOutputDOM.textContent = `
+                Вы хотите ${questionsOutput[3]} продать ${questionsOutput[1]} ${questionsOutput[2]} ${questionsOutput[0]}, 
+                предпочитаемым вариантом сделки является – ${questionsOutput[4]}? `;
+        }
     });
 
-    //Вы хотите продать "дом" "в россии"
 
 });
