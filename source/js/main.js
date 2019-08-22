@@ -111,19 +111,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const aboutTrack = document.querySelector('.about__images-track');
     const aboutThumbs = document.querySelectorAll('.about__thumb');
 
-    aboutTrack.style.width = aboutImagesContainer.clientWidth * aboutImages.length + 'px';
-    imageResize(aboutImages, aboutTrack, aboutImagesContainer);
-    
-    window.addEventListener('resize', function () {
-        imageResize(aboutImages, aboutTrack, aboutImagesContainer);
-    });
+    aboutTrack.style.width = aboutImages.length * 100 + '%';
 
-    function imageResize(images, track, sizeSource) {
-        track.style.width = sizeSource.clientWidth * images.length + 'px';
-        images.forEach(image => {
-            image.style.maxWidth = sizeSource.clientWidth + 'px';
-        });
-    }
+    aboutImages.forEach(image => {
+        image.style.maxWidth = 100 / aboutImages.length + '%';
+    });
 
     aboutThumbs.forEach((thumb, index) => {
         thumb.addEventListener('click', function () {
@@ -131,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 thumb.classList.remove('about__thumb--active');
             });
             this.classList.add('about__thumb--active');
-            aboutTrack.style.transform = `translateX(-${aboutImagesContainer.clientWidth * index}px)`;
+            aboutTrack.style.transform = `translateX(-${(100 / aboutThumbs.length) * index}%)`;
         });
     });
 
@@ -240,7 +232,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
 
 
 });

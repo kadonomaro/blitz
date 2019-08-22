@@ -770,12 +770,26 @@ img {
   line-height: 33px;
 }
 
+.questions-block__track {
+  margin-bottom: 30px;
+}
+
+.questions-block__track::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.questions-block__slide {
+  float: left;
+}
+
 .questions-block__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 25px;
-  margin: 0 -15px 30px;
+  margin: 0 -15px;
   border-bottom: 2px solid #f1f1f1;
 }
 
@@ -785,7 +799,31 @@ img {
 }
 
 .questions-block__image {
+  position: relative;
   margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.questions-block__image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../icons/draw-check-mark.svg");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: center;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.questions-block__image--checked::before {
+  opacity: 1;
 }
 
 .questions-block__footer {
