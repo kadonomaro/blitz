@@ -30,7 +30,6 @@
     }
 
     &__images {
-        position: relative;
         margin-bottom: 10px;
         overflow: hidden;
     }
@@ -45,7 +44,6 @@
     &__image {
         max-width: 555px;
         float: left;
-        
     }
     &__thumbs {
         display: flex;

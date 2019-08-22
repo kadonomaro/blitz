@@ -234,4 +234,44 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
+    //questions block
+
+    const questionsBlock = document.querySelector('.questions-block');
+    const questionsImage = questionsBlock.querySelectorAll('.questions-block__image');
+    const questionsNext = questionsBlock.querySelector('.questions-block__next');
+    const questionsSliderTrack = questionsBlock.querySelector('.questions-block__track');
+    const questionsSliderSlide = questionsBlock.querySelectorAll('.questions-block__slide');
+    const questionsCurrent = questionsBlock.querySelector('.questions-block__result-current');
+    const questionsTotal = questionsBlock.querySelector('.questions-block__result-total');
+    let currentSlide = 1;
+    let questionChecked = false;
+
+    questionsImage.forEach(image => {
+        image.addEventListener('click', function () {
+            questionsImage.forEach(image => {
+                image.classList.remove('questions-block__image--checked');
+            });
+            this.classList.add('questions-block__image--checked');
+            questionChecked = true;
+        });
+    });
+
+    questionsSliderTrack.style.width = questionsSliderSlide.length * 100 + '%';
+    questionsSliderSlide.forEach(slide => {
+        slide.style.width = 100 / questionsSliderSlide.length + '%';
+    });
+
+    questionsNext.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        if (currentSlide < questionsSliderSlide.length && questionChecked) {
+            questionsSliderTrack.style.transform = `translateX(-${100 / questionsSliderSlide.length * currentSlide}%)`;
+            currentSlide++;
+            questionChecked = false;
+            questionsCurrent.textContent = currentSlide - 1;
+        }
+        
+    });
+
+    //Вы хотите продать "дом" "в россии"
+
 });
