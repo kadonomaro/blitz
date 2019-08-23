@@ -247,6 +247,77 @@ img {
   color: #ffffff;
 }
 
+.call-form__label {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.call-form__input {
+  width: 100%;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid #606060;
+  -webkit-transition: border-color 0.2s ease-in;
+  transition: border-color 0.2s ease-in;
+  outline: none;
+}
+
+.call-form__input:focus {
+  border-color: #2a94e2;
+}
+
+.call-form__input::-webkit-input-placeholder {
+  color: #606060;
+}
+
+.call-form__input:-ms-input-placeholder {
+  color: #606060;
+}
+
+.call-form__input::-ms-input-placeholder {
+  color: #606060;
+}
+
+.call-form__input::placeholder {
+  color: #606060;
+}
+
+.call-form__placeholder {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  display: block;
+  color: #606060;
+  font-size: 18px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+
+.call-form__button {
+  width: 100%;
+  min-width: auto;
+}
+
+.call-form__info {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 5px;
+  display: block;
+  color: #ce3434;
+  font-weight: bold;
+  text-align: center;
+}
+
 @media screen and (max-width: 1023px) {
   .call__phone {
     font-size: 24px;
@@ -388,77 +459,6 @@ img {
 .modal__subtitle {
   display: block;
   margin-bottom: 15px;
-  text-align: center;
-}
-
-.modal__label {
-  position: relative;
-  display: block;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.modal__input {
-  width: 100%;
-  padding: 6px 12px;
-  font-family: inherit;
-  font-size: 18px;
-  border: none;
-  border-bottom: 2px solid #606060;
-  -webkit-transition: border-color 0.2s ease-in;
-  transition: border-color 0.2s ease-in;
-  outline: none;
-}
-
-.modal__input:focus {
-  border-color: #2a94e2;
-}
-
-.modal__input::-webkit-input-placeholder {
-  color: #606060;
-}
-
-.modal__input:-ms-input-placeholder {
-  color: #606060;
-}
-
-.modal__input::-ms-input-placeholder {
-  color: #606060;
-}
-
-.modal__input::placeholder {
-  color: #606060;
-}
-
-.modal__placeholder {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  display: block;
-  color: #606060;
-  font-size: 18px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  pointer-events: none;
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
-}
-
-.modal__button {
-  width: 100%;
-  min-width: auto;
-}
-
-.modal__info {
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 5px;
-  display: block;
-  color: #ce3434;
-  font-weight: bold;
   text-align: center;
 }
 
@@ -1087,6 +1087,10 @@ img {
   max-width: 335px;
 }
 
+.service__button:hover {
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1023px) {
   .services__title {
     margin-bottom: 15px;
@@ -1124,6 +1128,9 @@ img {
   }
   .service__text {
     max-height: none;
+  }
+  .service__button {
+    max-width: 100%;
   }
 }
 

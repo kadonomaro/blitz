@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalTitle = modal.querySelector('.modal__title');
     const modalSubtitle = modal.querySelector('.modal__subtitle');
     const modalCloseButton = modal.querySelector('.modal__close');
-    const modalInput = modal.querySelectorAll('.modal__input');
-    const modalSendButton = modal.querySelector('.modal__button');
-    const modalInfo = modal.querySelector('.modal__info');
+    const modalInput = modal.querySelectorAll('.js-modal-input');
+    const modalSendButton = modal.querySelector('.js-modal-button');
+    const modalInfo = modal.querySelector('.js-modal-info');
 
     callModalButton.forEach(button => {
         button.addEventListener('click', function () {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 modalInfo.textContent = 'Заполните оба поля';
                 setTimeout(() => {
                     modalInfo.style.display = 'none';
-                }, 3000);
+                }, 2000);
             }
         });
     });
@@ -248,44 +248,48 @@ document.addEventListener('DOMContentLoaded', function () {
     let questionsOutputItem = '';
     const questionsOutput = [];
 
-    questionsTotal.textContent = questionsSliderSlide.length - 1;
+    quiz();
 
-    questionsImage.forEach(image => {
-        image.addEventListener('click', function () {
-            questionsImage.forEach(image => {
-                image.classList.remove('questions-block__image--checked');
+    function quiz() {
+        questionsTotal.textContent = questionsSliderSlide.length - 1;
+
+        questionsImage.forEach(image => {
+            image.addEventListener('click', function () {
+                questionsImage.forEach(image => {
+                    image.classList.remove('questions-block__image--checked');
+                });
+                this.classList.add('questions-block__image--checked');
+                questionsNext.classList.remove('questions-block__next--disabled');
+                questionChecked = true;
+                questionsOutputItem = this.nextElementSibling.dataset.value;
             });
-            this.classList.add('questions-block__image--checked');
-            questionsNext.classList.remove('questions-block__next--disabled');
-            questionChecked = true;
-            questionsOutputItem = this.nextElementSibling.textContent.toLowerCase();
         });
-    });
+    
+        questionsSliderTrack.style.width = questionsSliderSlide.length * 100 + '%';
+        questionsSliderSlide.forEach(slide => {
+            slide.style.width = 100 / questionsSliderSlide.length + '%';
+        });
+    
+        questionsNext.addEventListener('click', function (evt) {
+            evt.preventDefault();
+            if (currentSlide < questionsSliderSlide.length && questionChecked) {
+                questionsSliderTrack.style.transform = `translateX(-${100 / questionsSliderSlide.length * currentSlide}%)`;
+                currentSlide++;
+                questionChecked = false;
+                questionsCurrent.textContent = currentSlide - 1;
+                questionsOutput.push(questionsOutputItem);
+            }
+            this.classList.add('questions-block__next--disabled');
+    
+            if (currentSlide === questionsSliderSlide.length) {
+                this.style.display = 'none';
+                questionsOutputDOM.textContent = `
+                    Вы хотите ${questionsOutput[3]} продать ${questionsOutput[1]} ${questionsOutput[2]} ${questionsOutput[0]}, 
+                    покупатель может использовать ${questionsOutput[4]}? `;
+            }
+        });
+    }
 
-    questionsSliderTrack.style.width = questionsSliderSlide.length * 100 + '%';
-    questionsSliderSlide.forEach(slide => {
-        slide.style.width = 100 / questionsSliderSlide.length + '%';
-    });
-
-    questionsNext.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        if (currentSlide < questionsSliderSlide.length && questionChecked) {
-            questionsSliderTrack.style.transform = `translateX(-${100 / questionsSliderSlide.length * currentSlide}%)`;
-            currentSlide++;
-            questionChecked = false;
-            questionsCurrent.textContent = currentSlide - 1;
-            questionsOutput.push(questionsOutputItem);
-            console.log(questionsOutput);
-        }
-        this.classList.add('questions-block__next--disabled');
-
-        if (currentSlide === questionsSliderSlide.length) {
-            this.style.display = 'none';
-            questionsOutputDOM.textContent = `
-                Вы хотите ${questionsOutput[3]} продать ${questionsOutput[1]} ${questionsOutput[2]} ${questionsOutput[0]}, 
-                предпочитаемым вариантом сделки является – ${questionsOutput[4]}? `;
-        }
-    });
 
 
 });

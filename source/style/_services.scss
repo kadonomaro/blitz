@@ -68,6 +68,9 @@
     &__button {
         width: 100%;
         max-width: 335px;
+        &:hover {
+            color: #ffffff;
+        }
     }
 }
 
@@ -116,6 +119,9 @@
         text-shadow: 0 0 3px black;
         &__text {
             max-height: none;
+        }
+        &__button {
+            max-width: 100%;
         }
     }
 }
