@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
     //about custom slider
-    const aboutImagesContainer = document.querySelector('.about__images');
     const aboutImages = document.querySelectorAll('.about__image');
     const aboutTrack = document.querySelector('.about__images-track');
     const aboutThumbs = document.querySelectorAll('.about__thumb');
